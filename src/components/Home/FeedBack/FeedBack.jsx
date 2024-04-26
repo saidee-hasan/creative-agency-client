@@ -1,8 +1,16 @@
+import { useEffect, useState } from "react";
 import customer1 from "../../../assets/coustomer/customer-1.png";
 import customer2 from "../../../assets/coustomer/customer-2.png";
 import customer3 from "../../../assets/coustomer/customer-3.png";
 
 const FeedBack = () => {
+  const [product, setProduct] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/uplodImages")
+      .then((res) => res.json())
+      .then((data) => setProduct(data));
+  }, []);
+  console.log(product);
   const coustomarData = [
     {
       img: customer1,
@@ -32,11 +40,11 @@ const FeedBack = () => {
         Clients <samp className="text-green-700">Feedback</samp>{" "}
       </h1>
       <section>
-        {coustomarData.map((info) => (
+        {product.map((info) => (
           <div key={info.title}>
             <div className="sm:w-1/4 w-full text-center  p-6 float-left sm:ml-24 bg-white border  border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
               <div className="bg-slate-600 w-full rounded-sm">
-                <img className="w-20" src={info.img} alt="" />
+                <img className="w-20" src={info.image} alt="" />
               </div>
 
               <a href="#">

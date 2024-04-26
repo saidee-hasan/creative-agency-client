@@ -44,8 +44,8 @@ const Card = () => {
         "We craft stunning and amazing web UI, using a well drrafted UX to fit your product.",
     },
   ];
- 
-  console.log(cardData);
+
+  // console.log(cardData);
   return (
     <section>
       {cardData.map((info) => (
