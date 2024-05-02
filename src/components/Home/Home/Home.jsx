@@ -1,10 +1,13 @@
 import FeedBack from "../FeedBack/FeedBack";
 import Registration from "../Registration/Registration";
 import Card from "../Card/Card";
-import Carousel from "../Carousel/Carousel";
+
 import Header from "../Header/Header";
 import Navbar from "../../Share/Navbar/Navbar";
 import SubmitFrom from "../SubmitFrom/SubmitFrom";
+import Carousel from './../Carousel/Carousel';
+
+
 
 const Home = () => {
   return (
@@ -14,7 +17,10 @@ const Home = () => {
       <Card></Card>
       <Carousel></Carousel>
       <FeedBack></FeedBack>
-      <Registration></Registration>
+      
+     
+   
+      {/* <Registration></Registration> */}
     </div>
   );
 };

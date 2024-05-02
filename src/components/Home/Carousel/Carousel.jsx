@@ -4,21 +4,27 @@ import carousel3 from "../../../assets/carosusel/carousel-3.png";
 import carousel4 from "../../../assets/carosusel/carousel-4.png";
 import carousel5 from "../../../assets/carosusel/carousel-5.png";
 
+
 const Carousel = () => {
   return (
     <div>
-      <h1 className="text-black text-xl">
-        Here are some of <p className="text-red-700">our works</p>{" "}
-      </h1>
+    
       <div
         id="default-carousel"
-        className="relative   w-full "
+        className="relative mt-40  w-full "
         data-carousel="slide"
       >
         {/* <!-- Carousel wrapper --> */}
-        <div className="relative h-56 flex  overflow-hidden rounded-lg md:h-96">
+        <div className="relative h-56 w-full flex  overflow-hidden rounded-lg md:h-96">
+          <h1 className="text-black w-full text-xl">
+            Here are some of <p className="text-red-700">our works</p>{" "}
+          </h1>
+
           {/* <!-- Item 1 --> */}
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
+          <div
+            className="hidden duration-700 mt-80 ease-in-out"
+            data-carousel-item
+          >
             <img
               src={carousel1}
               className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
