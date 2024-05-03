@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 const Card = () => {
   const [product, setProduct] = useState([]);
   useEffect(() => {
-    fetch("https://creative-agency-31tg2vnnb-saidee-hasans-projects.vercel.app/uplodImages/uplodImages")
+    fetch("https://creative-agency-31tg2vnnb-saidee-hasans-projects.vercel.app/uplodImages")
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);
