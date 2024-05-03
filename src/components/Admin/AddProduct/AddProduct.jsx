@@ -26,7 +26,7 @@ const AddProduct = () => {
           title,
           image: data.data.url,
         };
-        fetch("https://creative-agency-alpha.vercel.app/uplod", {
+        fetch("https://creative-agency-31tg2vnnb-saidee-hasans-projects.vercel.app/uplod", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(userData),
@@ -37,12 +37,12 @@ const AddProduct = () => {
   };
   const [product, setProduct] = useState([]);
   useEffect(() => {
-    fetch("https://creative-agency-alpha.vercel.app/uplodImages")
+    fetch("https://creative-agency-31tg2vnnb-saidee-hasans-projects.vercel.app/uplodImages")
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);
   const deleteProduct = (id)=>{
-    fetch(`https://creative-agency-alpha.vercel.app/delete/${id}`,{
+    fetch(`https://creative-agency-31tg2vnnb-saidee-hasans-projects.vercel.app/delete/${id}`,{
       method: "DELETE",
     })
     .then(res=> res.json())
